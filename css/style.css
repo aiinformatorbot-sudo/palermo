@@ -782,8 +782,8 @@ ul {
 .results-embed {
   position: relative;
   width: 100%;
-  min-height: 560px;
-  padding: 18px;
+  min-height: 600px;
+  padding: 4px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid rgba(23, 80, 74, 0.08);
@@ -791,11 +791,19 @@ ul {
   overflow: hidden;
 }
 
+.results-embed {
+  min-height: 880px;
+}
+
 #mbh-form-wrapper,
 #mbh-results-wrapper {
   width: 100%;
-  min-height: 520px;
+  min-height: 560px;
   display: block;
+}
+
+#mbh-results-wrapper {
+  min-height: 860px;
 }
 
 #mbh-form-wrapper iframe,
@@ -804,10 +812,16 @@ ul {
 .results-embed iframe {
   width: 100% !important;
   max-width: 100% !important;
-  min-height: 520px;
+  min-height: 560px;
   border: 0;
   border-radius: 16px;
   display: block;
+  background: #ffffff;
+}
+
+#mbh-results-wrapper iframe,
+.results-embed iframe {
+  min-height: 860px;
 }
 
 /* Fallback styling for the MaxiBooking form when no Bootswatch theme is
@@ -908,24 +922,30 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .booking-embed,
+  .booking-embed {
+    min-height: 680px;
+  }
   .results-embed {
-    min-height: 640px;
+    min-height: 1100px;
   }
   #mbh-form-wrapper,
-  #mbh-results-wrapper,
-  #mbh-form-wrapper iframe,
-  #mbh-results-wrapper iframe,
   .booking-embed iframe,
-  .results-embed iframe {
-    min-height: 600px;
+  #mbh-form-wrapper iframe {
+    min-height: 640px;
+  }
+  #mbh-results-wrapper,
+  .results-embed iframe,
+  #mbh-results-wrapper iframe {
+    min-height: 1080px;
   }
 }
 
 @media (min-width: 1280px) {
-  .booking-embed,
+  .booking-embed {
+    min-height: 760px;
+  }
   .results-embed {
-    min-height: 720px;
+    min-height: 1200px;
   }
   #mbh-form-wrapper iframe,
   #mbh-results-wrapper iframe,
