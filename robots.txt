@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aiinformatorbot-sudo.github.io/palermo/sitemap.xml
