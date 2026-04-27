@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aiinformatorbot-sudo.github.io/palermo/sitemap.xml
+Sitemap: https://palermo-feo.ru/sitemap.xml

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/rooms.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/services.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/booking.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/results.html</loc><changefreq>weekly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/contacts.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/blog/feodosiya-otdyh-2026.html</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/blog/sudak-tavrida-2026.html</loc><lastmod>2026-04-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/blog/zolotoy-plyazh-beregovoye-2026.html</loc><lastmod>2026-04-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/blog/galereya-ayvazovskogo-muzei-feodosii.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/blog/koktebel-karadag-2026.html</loc><lastmod>2026-04-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/blog/kogda-ehat-v-krym-2026.html</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/blog/gastroguide-krym-2026.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://aiinformatorbot-sudo.github.io/palermo/policy.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://palermo-feo.ru/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://palermo-feo.ru/rooms.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://palermo-feo.ru/services.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://palermo-feo.ru/booking.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://palermo-feo.ru/results.html</loc><changefreq>weekly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://palermo-feo.ru/contacts.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://palermo-feo.ru/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://palermo-feo.ru/blog/feodosiya-otdyh-2026.html</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://palermo-feo.ru/blog/sudak-tavrida-2026.html</loc><lastmod>2026-04-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://palermo-feo.ru/blog/zolotoy-plyazh-beregovoye-2026.html</loc><lastmod>2026-04-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://palermo-feo.ru/blog/galereya-ayvazovskogo-muzei-feodosii.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://palermo-feo.ru/blog/koktebel-karadag-2026.html</loc><lastmod>2026-04-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://palermo-feo.ru/blog/kogda-ehat-v-krym-2026.html</loc><lastmod>2026-03-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://palermo-feo.ru/blog/gastroguide-krym-2026.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://palermo-feo.ru/policy.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>
