@@ -110,4 +110,36 @@ onReady(() => {
       }
     });
   }
+
+  // MaxiBooking iframe — auto-resize, force full width and observe injected iframes
+  const mbWrappers = document.querySelectorAll('#mbh-form-wrapper, #mbh-results-wrapper');
+  if (mbWrappers.length) {
+    const tuneIframe = (iframe) => {
+      if (!iframe || iframe.dataset.mbhTuned) return;
+      iframe.dataset.mbhTuned = '1';
+      iframe.setAttribute('width', '100%');
+      iframe.style.width = '100%';
+      iframe.style.maxWidth = '100%';
+      iframe.style.border = '0';
+      iframe.style.display = 'block';
+    };
+
+    mbWrappers.forEach((wrapper) => {
+      wrapper.querySelectorAll('iframe').forEach(tuneIframe);
+      const observer = new MutationObserver(() => {
+        wrapper.querySelectorAll('iframe').forEach(tuneIframe);
+      });
+      observer.observe(wrapper, { childList: true, subtree: true });
+    });
+
+    window.addEventListener('message', (event) => {
+      const data = event.data;
+      if (!data || data.type !== 'mbh') return;
+      const target = document.querySelector('#mbh-form-wrapper iframe, #mbh-results-wrapper iframe');
+      if (!target) return;
+      if (typeof data.height === 'number' && data.height > 0) {
+        target.style.height = data.height + 'px';
+      }
+    });
+  }
 });
