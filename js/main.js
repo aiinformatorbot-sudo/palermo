@@ -7,6 +7,10 @@ const onReady = (callback) => {
   callback();
 };
 
+// Включаем CSS-анимации появления только когда работает JavaScript.
+// Если скрипт не загрузился — контент остаётся видимым, без opacity:0.
+document.documentElement.classList.add('js');
+
 onReady(() => {
   const body = document.body;
   const menuToggle = document.querySelector('[data-menu-toggle]');
@@ -54,6 +58,11 @@ onReady(() => {
   window.addEventListener('scroll', updateProgress, { passive: true });
 
   if (revealItems.length) {
+    // Порог 0 + небольшой отрицательный rootMargin: элемент проявляется,
+    // как только хотя бы краешек попал в верхние 92% экрана. Это критично
+    // для длинных статей в блоге: при threshold 0.15 у элементов высотой
+    // больше ~6.7 экранов условие никогда не достигалось и текст оставался
+    // невидимым.
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -64,12 +73,20 @@ onReady(() => {
         });
       },
       {
-        rootMargin: '0px 0px -10% 0px',
-        threshold: 0.15,
+        rootMargin: '0px 0px -8% 0px',
+        threshold: 0,
       }
     );
 
     revealItems.forEach((item) => observer.observe(item));
+
+    // Страховка: если по какой-то причине IntersectionObserver не успел
+    // отметить блоки (например, нестабильные iOS-браузеры или мгновенный
+    // переход по якорю в середину длинной статьи), через 1.2 секунды после
+    // загрузки принудительно показываем всё, что ещё прозрачно.
+    window.setTimeout(() => {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
+    }, 1200);
   }
 
   if (lightbox && lightboxImage && lightboxCaption && lightboxClose) {
