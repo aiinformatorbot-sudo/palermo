@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Palermo favicon">
-  <rect width="128" height="128" rx="28" fill="#17504A"/>
-  <circle cx="64" cy="64" r="42" fill="#41E0D0" opacity="0.18"/>
-  <path d="M40 94V34h28c16 0 25 8 25 21 0 14-10 23-26 23H55v16H40zm15-28h11c8 0 12-3 12-10 0-6-4-9-12-9H55v19z" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Палермо · Гостевой дом">
+  <rect width="128" height="128" rx="22" fill="#1d3d4a"/>
+  <circle cx="64" cy="64" r="44" fill="#c79553" opacity="0.16"/>
+  <path d="M30 94V34h68v14H66v46H51V48H45v46H30z" fill="#fffdf6"/>
+  <circle cx="98" cy="42" r="6" fill="#b8552d"/>
 </svg>
