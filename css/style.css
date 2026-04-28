@@ -37,6 +37,7 @@
   /* Типографика */
   --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans: 'Inter', 'PT Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --font-script: 'Marck Script', 'Italianno', 'Cormorant Garamond', cursive;
 }
 
 * {
@@ -173,6 +174,33 @@ select {
 
 .section--ink .eyebrow::before {
   background: var(--sand);
+}
+
+/*
+  Внутри тёмной секции карточка .quote-banner остаётся светлой (cream),
+  поэтому возвращаем тёмный цвет текста для содержимого этой карточки —
+  иначе светлый текст наследовался бы от .section--ink и сливался бы с фоном.
+*/
+.section--ink .quote-banner h1,
+.section--ink .quote-banner h2,
+.section--ink .quote-banner h3,
+.section--ink .quote-banner h4 {
+  color: var(--primary-dark);
+}
+
+.section--ink .quote-banner p,
+.section--ink .quote-banner li,
+.section--ink .quote-banner strong {
+  color: var(--ink);
+}
+
+.section--ink .quote-banner .eyebrow {
+  background: rgba(29, 61, 74, 0.06);
+  color: var(--primary-dark);
+}
+
+.section--ink .quote-banner .eyebrow::before {
+  background: var(--primary-dark);
 }
 
 /* ============== Типографика ============== */
@@ -327,12 +355,34 @@ ul {
 }
 
 .brand__title {
-  font-family: var(--font-serif);
-  font-size: 1.85rem;
-  font-weight: 600;
+  font-family: var(--font-script);
+  font-size: 2.1rem;
+  font-weight: 400;
   line-height: 1;
   color: var(--primary-dark);
   letter-spacing: 0.01em;
+}
+
+/*
+  Рукописное начертание для слова «Палермо» внутри заголовков и параграфов.
+  Используем Marck Script (Google Fonts) — элегантная курсивная типография
+  с полной поддержкой кириллицы в духе небольших европейских отелей.
+*/
+.script-name {
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  /* Скриптовые шрифты выглядят визуально мельче соседнего серифа, поэтому слегка увеличиваем */
+  font-size: 1.25em;
+  line-height: 1;
+  vertical-align: -0.04em;
+  /* Берем букву в рамку серифа более теплым цветом акцента — элегантный контраст */
+  color: var(--accent);
+}
+
+.script-name--ink {
+  color: var(--sand);
 }
 
 .brand__meta {
@@ -2012,19 +2062,27 @@ ul {
 
 /* ============== Reveal animation ============== */
 
-[data-reveal] {
+/*
+  Контент по умолчанию виден всегда. Анимация появления включается только тогда,
+  когда JavaScript отметил <html class="js"> — это гарантирует, что текст никогда
+  не остаётся невидимым, если IntersectionObserver не сработал
+  (например, у длинных статей в блоге, где порог пересечения недостижим).
+*/
+
+.js [data-reveal] {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-[data-reveal].is-visible {
+.js [data-reveal].is-visible,
+.js [data-reveal].is-revealed {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal] {
+  .js [data-reveal] {
     opacity: 1;
     transform: none;
     transition: none;
