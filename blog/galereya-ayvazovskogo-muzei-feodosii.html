@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Картинная галерея Айвазовского и музеи Феодосии: маршрут на день — блог «Палермо»</title>
         <meta name="description" content="Гид по культурной Феодосии: картинная галерея И. К. Айвазовского, музей Александра Грина, Музей древностей и дача Стамболи. Цены, расписание, маршрут на день и советы 2026." />
-        <meta name="theme-color" content="#1d3d4a" />
+        <meta name="theme-color" content="#2a160c" />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="ru_RU" />
         <meta property="og:title" content="Картинная галерея Айвазовского и музеи Феодосии: маршрут на день — блог «Палермо»" />
@@ -20,7 +20,10 @@
         <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Marck+Script&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
         <link rel="stylesheet" href="../css/style.css" />
     <script type="application/ld+json">
 {
@@ -127,28 +130,59 @@
 <div class="page-shell">
   <div class="scroll-progress" data-scroll-progress></div>
   <header class="site-header">
-    <div class="container site-header__row">
-      <a class="brand" href="../index.html" aria-label="Палермо — на главную">
-        <span class="brand__title">Палермо</span>
-        <span class="brand__meta">Гостевой дом · Феодосия</span>
-      </a>
-      <nav class="site-nav" aria-label="Основная навигация" data-menu>
-        <ul class="site-nav__links">
-          <li><a href="../index.html">Главная</a></li>
-          <li><a href="../rooms.html">Номера</a></li>
-          <li><a href="../services.html">Услуги</a></li>
-          <li><a href="../booking.html">Бронирование</a></li>
-          <li><a href="./" aria-current="page">Блог</a></li>
-          <li><a href="../contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
-      <div class="site-header__actions">
-        <a class="site-header__phone" href="tel:+79788330964">+7 978 833-09-64</a>
-        <a class="btn btn--primary btn--small btn--header" href="../booking.html">Забронировать сейчас</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Открыть меню" data-menu-toggle><span class="menu-toggle__bars"></span></button>
-      </div>
-    </div>
-  </header>
+        <div class="container">
+          <div class="site-header__top">
+            <div class="site-header__contacts">
+              <span class="site-header__contact">
+                <span><span class="label">Адрес</span>Феодосия, Советская ул., 38</span>
+              </span>
+              <span class="site-header__contact">
+                <span><span class="label">Стойка регистрации</span>Круглосуточно</span>
+              </span>
+            </div>
+            <div class="site-header__contacts">
+              <a class="site-header__contact" href="tel:+79788330964">
+                <span><span class="label">Бронирование</span>+7 978 833-09-64</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="site-header__row">
+            <a class="brand" href="../index.html" aria-label="Гостевой дом Палермо — на главную">
+              <span class="brand__crest" aria-hidden="true">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="0.7" />
+                  <circle cx="40" cy="40" r="32" stroke="currentColor" stroke-width="0.4" />
+                  <path d="M40 8 L40 12 M40 68 L40 72 M8 40 L12 40 M68 40 L72 40" stroke="currentColor" stroke-width="0.7" />
+                  <text x="40" y="52" text-anchor="middle" font-family="'Cormorant Garamond', 'Playfair Display', serif" font-size="34" font-weight="500" fill="currentColor">P</text>
+                  <path d="M27 20 Q40 15 53 20" stroke="currentColor" stroke-width="0.5" fill="none" />
+                  <path d="M27 60 Q40 65 53 60" stroke="currentColor" stroke-width="0.5" fill="none" />
+                </svg>
+              </span>
+              <span class="brand__title">Палермо</span>
+              <span class="brand__meta">Гостевой дом · Феодосия</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Основная навигация" data-menu>
+              <ul class="site-nav__links">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../rooms.html">Номера</a></li>
+                <li><a href="../services.html">Услуги</a></li>
+                <li><a href="../booking.html">Бронирование</a></li>
+                <li><a href="index.html" aria-current="page">Журнал</a></li>
+                <li><a href="../contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+
+            <div class="site-header__actions">
+              <a class="btn btn--primary btn--small btn--header" href="../booking.html">Забронировать</a>
+              <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Открыть меню" data-menu-toggle>
+                <span class="menu-toggle__bars"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
 
       <main id="main-content">
         <section class="section section--compact">
@@ -320,31 +354,45 @@
         </section>
       </main>
   <footer class="site-footer">
-    <div class="container footer__grid">
-      <div>
-        <a class="brand" href="../index.html">
-          <span class="brand__title">Палермо</span>
-          <span class="brand__meta">Гостевой дом · Феодосия</span>
-        </a>
-        <p class="footer__note">
-          Гостевой дом в центре Феодосии —.
-        </p>
-      </div>
-      <div class="footer__menu">
-        <a href="../rooms.html">Номера</a>
-        <a href="../services.html">Услуги</a>
-        <a href="../booking.html">Бронирование</a>
-        <a href="./">Блог</a>
-        <a href="../contacts.html">Контакты</a>
-        <a href="../policy.html">Политика конфиденциальности</a>
-      </div>
-      <div class="footer__meta">
-        <a href="tel:+79788330964">+7 978 833-09-64</a>
-        <span class="footer__note">Феодосия, Советская ул., 38</span>
-        <span class="footer__note">© <span data-current-year></span> Гостевой дом «Палермо»</span>
-      </div>
-    </div>
-  </footer>
+        <div class="container">
+          <div class="footer__grid">
+            <div>
+              <a class="brand" href="../index.html" style="align-items:flex-start;">
+                <span class="brand__crest" aria-hidden="true">
+                  <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="0.7" />
+                    <text x="40" y="52" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="34" font-weight="500" fill="currentColor">P</text>
+                  </svg>
+                </span>
+                <span class="brand__title">Палермо</span>
+                <span class="brand__meta">Гостевой дом · Феодосия</span>
+              </a>
+              <p class="footer__note">
+                Маленькая Италия на берегу Феодосии. Тёплый камень, перголы,
+                утренний эспрессо и тихий двор в шаге от моря.
+              </p>
+            </div>
+            <div class="footer__menu">
+              <strong>Сайт</strong>
+              <a href="../rooms.html">Номера</a>
+              <a href="../services.html">Услуги</a>
+              <a href="../booking.html">Бронирование</a>
+              <a href="index.html">Журнал</a>
+              <a href="../contacts.html">Контакты</a>
+              <a href="../policy.html">Политика конфиденциальности</a>
+            </div>
+            <div class="footer__meta">
+              <strong>Связаться</strong>
+              <a class="footer__phone" href="tel:+79788330964">+7 978 833-09-64</a>
+              <a href="https://yandex.com/maps/-/CPGXqGj7" target="_blank" rel="noreferrer">Феодосия, Советская ул., 38</a>
+            </div>
+          </div>
+          <div class="footer__legal">
+            <span>© <span data-current-year>2026</span> Гостевой дом «Палермо». Все права защищены.</span>
+            <a href="../policy.html">Политика конфиденциальности</a>
+          </div>
+        </div>
+      </footer>
 
   <div class="mobile-cta">
     <a class="btn btn--primary" href="../booking.html">Забронировать</a>
