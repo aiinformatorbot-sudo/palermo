@@ -128,6 +128,36 @@ onReady(() => {
     });
   }
 
+  // Promo popup — show once per session (localStorage)
+  const promoPopup = document.getElementById('promoPopup');
+  if (promoPopup) {
+    const PROMO_KEY = 'palermo_promo_seen';
+    const alreadySeen = localStorage.getItem(PROMO_KEY);
+
+    if (!alreadySeen) {
+      setTimeout(() => {
+        promoPopup.hidden = false;
+        body.classList.add('lightbox-open');
+      }, 1500);
+    }
+
+    const closePromo = () => {
+      promoPopup.hidden = true;
+      body.classList.remove('lightbox-open');
+      localStorage.setItem(PROMO_KEY, '1');
+    };
+
+    promoPopup.querySelectorAll('[data-promo-close]').forEach((el) => {
+      el.addEventListener('click', closePromo);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !promoPopup.hidden) {
+        closePromo();
+      }
+    });
+  }
+
   // MaxiBooking iframe — auto-resize, force full width and observe injected iframes
   const mbWrappers = document.querySelectorAll('#mbh-form-wrapper, #mbh-results-wrapper');
   if (mbWrappers.length) {

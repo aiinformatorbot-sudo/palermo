@@ -2237,3 +2237,154 @@ main > section.section--blog-hero {
 main > section.section--cocoa { background: var(--cocoa); border-bottom: 1px solid rgba(244, 231, 207, 0.12); }
 main > section.hero { background: var(--espresso); }
 
+/* =============================================================
+   Промо-баннер (страница бронирования)
+   ============================================================= */
+
+.promo-banner {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--terracotta) 100%);
+  padding: 18px 0;
+  text-align: center;
+}
+
+.promo-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.promo-banner__icon {
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+.promo-banner__text {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.promo-banner__text strong {
+  font-size: 1.15em;
+  letter-spacing: 0.02em;
+}
+
+.promo-banner__cta {
+  display: inline-block;
+  background: #fff;
+  color: var(--terracotta);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.promo-banner__cta:hover {
+  background: var(--cream);
+  color: var(--terracotta-deep);
+  transform: translateY(-1px);
+}
+
+/* =============================================================
+   Промо-попап (главная страница)
+   ============================================================= */
+
+.promo-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.promo-popup__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(42, 22, 12, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.promo-popup__dialog {
+  position: relative;
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-deep);
+  max-width: 440px;
+  width: 100%;
+  padding: 40px 32px 32px;
+  text-align: center;
+  animation: popupSlideIn 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes popupSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.promo-popup__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+
+.promo-popup__close:hover {
+  color: var(--ink);
+}
+
+.promo-popup__icon {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.promo-popup__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
+  color: var(--ink);
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.promo-popup__desc {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 0 0 22px;
+}
+
+.promo-popup__btn {
+  display: inline-block;
+  width: 100%;
+  max-width: 280px;
+  padding: 14px 28px;
+  font-size: 1rem;
+}
+
+.promo-popup__hint {
+  margin: 14px 0 0;
+  font-size: 0.82rem;
+  color: var(--muted-2);
+}
+
