@@ -2305,6 +2305,10 @@ main > section.hero { background: var(--espresso); }
   padding: 20px;
 }
 
+.promo-popup[hidden] {
+  display: none;
+}
+
 .promo-popup__overlay {
   position: absolute;
   inset: 0;
