@@ -155,24 +155,35 @@
     </div>
     <script src="js/main.js"></script>
     <script src="https://btishhenko.maxi-booking.ru/management/online/api/file/69ef42a3d2453a38512b97a0/load-result"></script>
-  <script>
+<script>
 (function() {
-  var origOpen = XMLHttpRequest.prototype.open;
-  XMLHttpRequest.prototype.open = function() {
-    var url = arguments[1];
-    if (url && 
-        url.includes('maxi-booking.ru') && 
-        url.includes('packages/create')) {
-      this.addEventListener('load', function() {
-        if (this.status === 200 && !window._mbGoalSent) {
-          window._mbGoalSent = true;
-          ym(109083060, 'reachGoal', 'booking_complete');
-          console.log('Цель отправлена: booking_complete');
-        }
-      });
+  function checkBooking() {
+    var frames = document.querySelectorAll('iframe');
+    // Проверяем основной документ
+    if (document.body.innerText.includes('ЗАКАЗ ЗАРЕГИСТРИРОВАН') 
+        && !window._mbGoalSent) {
+      window._mbGoalSent = true;
+      ym(109083060, 'reachGoal', 'booking_complete');
+      console.log('✅ booking_complete отправлено');
     }
-    return origOpen.apply(this, arguments);
-  };
+  }
+
+  var observer = new MutationObserver(checkBooking);
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
+  
+  // Также слушаем сообщения от iframe MaxiBooking
+  window.addEventListener('message', function(e) {
+    if (e.data && JSON.stringify(e.data).includes('order') 
+        && !window._mbGoalSent) {
+      window._mbGoalSent = true;
+      ym(109083060, 'reachGoal', 'booking_complete');
+      console.log('✅ booking_complete (postMessage)');
+    }
+  });
 })();
 </script>
   </body>
