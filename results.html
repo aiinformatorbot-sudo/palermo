@@ -154,35 +154,6 @@
       <div class="mobile-cta"><a class="btn btn--primary" href="booking.html">Попробовать другие даты</a></div>
     </div>
     <script src="js/main.js"></script>
-<script>
-window.yaCounterObjName = 'yaCounter109083060';
-window['yaCounter109083060'] = {
-  reachGoal: function(goal, params) {
-    if (typeof ym === 'function') {
-      ym(109083060, 'reachGoal', goal, params);
-    }
-    console.log('👉 MaxiBooking вызвал reachGoal:', goal);
-  },
-  hit: function(url, opts) {
-    if (typeof ym === 'function') {
-      // 1. Пропускаем оригинальный запрос MaxiBooking
-      ym(109083060, 'hit', url, opts);
-      
-      // 2. Если это финальный шаг (choose), жестко генерируем нужную нам цель
-      if (url && url.indexOf('choose') !== -1) {
-        ym(109083060, 'reachGoal', 'booking_complete');
-        console.log('✅ ПОЙМАЛИ ФИНАЛ! Отправлена JS-цель: booking_complete');
-      }
-    }
-    console.log('🔍 MaxiBooking вызвал hit (просмотр страницы):', url);
-  },
-  params: function(p) {
-    if (typeof ym === 'function') {
-      ym(109083060, 'params', p);
-    }
-  }
-};
-</script>
     <script src="https://btishhenko.maxi-booking.ru/management/online/api/file/69ef42a3d2453a38512b97a0/load-result"></script>
 
   </body>
