@@ -1,0 +1,148 @@
+/* =================================================================
+   Палермо · MaxiBooking — CSS для формы поиска
+   Куда вставить: «Дополнительные css-стили для онлайн формы»
+   (поле «CSS для формы поиска» в админке MaxiBooking).
+   Палитра и типографика синхронизированы с css/style.css сайта.
+   ================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --pl-espresso: #2a160c;
+  --pl-cocoa: #5a3826;
+  --pl-cream: #f4e7cf;
+  --pl-gold: #b58a4f;
+  --pl-gold-2: #d8a85e;
+  --pl-gold-soft: rgba(181, 138, 79, 0.18);
+  --pl-terracotta: #b8552d;
+  --pl-ink: #20140a;
+  --pl-ink-soft: #4a3422;
+  --pl-muted: #6f5c47;
+  --pl-line: rgba(42, 22, 12, 0.14);
+  --pl-radius: 4px;
+  --pl-radius-md: 8px;
+}
+
+body, html {
+  background: transparent !important;
+  font-family: 'Inter', 'PT Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif !important;
+  color: var(--pl-ink) !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* Заголовки — Cormorant Garamond, как на сайте */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif !important;
+  color: var(--pl-espresso) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  margin-top: 0 !important;
+}
+
+/* Контейнер формы */
+#mbh-form, .mbh-form, [class*="search-form"], form {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Метки полей — узкий капс, как «eyebrow» на сайте */
+label, .control-label, .mbh-form-row label, .form-group label {
+  display: block !important;
+  margin-bottom: 8px !important;
+  color: var(--pl-espresso) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.74rem !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+}
+
+/* Поля ввода и селекты */
+.form-control,
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100% !important;
+  min-height: 46px !important;
+  padding: 10px 14px !important;
+  border: 1px solid var(--pl-line) !important;
+  border-radius: var(--pl-radius) !important;
+  background: #fff !important;
+  color: var(--pl-ink) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1rem !important;
+  box-shadow: none !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+
+.form-control:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  border-color: var(--pl-gold) !important;
+  box-shadow: 0 0 0 3px var(--pl-gold-soft) !important;
+}
+
+/* Селект со стрелочкой в фирменном цвете */
+select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--pl-espresso) 50%),
+    linear-gradient(135deg, var(--pl-espresso) 50%, transparent 50%) !important;
+  background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50% !important;
+  background-size: 5px 5px, 5px 5px !important;
+  background-repeat: no-repeat !important;
+  padding-right: 36px !important;
+}
+
+/* Главная кнопка «Забронировать» — золото на эспрессо, без скруглений-таблеток */
+#mbh-form-submit,
+button[type="submit"],
+.btn-primary,
+.btn-success {
+  flex: 0 0 auto !important;
+  min-width: 220px !important;
+  width: auto !important;
+  height: 48px !important;
+  padding: 0 28px !important;
+  border: 1px solid var(--pl-gold) !important;
+  border-radius: var(--pl-radius) !important;
+  background: var(--pl-gold) !important;
+  color: var(--pl-espresso) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.83rem !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  box-shadow: 0 10px 28px rgba(42, 22, 12, 0.10) !important;
+  transition: background .2s ease, border-color .2s ease, transform .15s ease !important;
+}
+
+#mbh-form-submit:hover,
+button[type="submit"]:hover,
+.btn-primary:hover,
+.btn-success:hover {
+  background: var(--pl-gold-2) !important;
+  border-color: var(--pl-gold-2) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Прячем брендинг maxi-booking */
+#mbh-form a[href*="maxi-booking"],
+.preload-link-maxibooking,
+[class*="powered"],
+.mbh-powered { display: none !important; }
+
+/* Ссылки */
+a { color: var(--pl-terracotta) !important; }
+a:hover { color: var(--pl-gold) !important; }
